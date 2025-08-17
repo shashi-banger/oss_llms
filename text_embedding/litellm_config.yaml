@@ -1,0 +1,16 @@
+model_list:
+  - model_name: qwen-embedding
+    litellm_params:
+      model: hosted_vllm/Qwen/Qwen3-Embedding-0.6B
+      api_base: http://vllm:8000/v1
+      api_key: "fake-key"
+      provider: vllm
+
+litellm_settings:
+  drop_params: true
+  set_verbose: true
+
+general_settings:
+  master_key: sk-sb123
+  database_url: "postgresql://litellm:litellm123@postgres:5432/litellm"
+  store_model_in_db: true
